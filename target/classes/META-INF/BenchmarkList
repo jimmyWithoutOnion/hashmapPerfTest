@@ -1,2 +1,2 @@
-JMH S 18 jmh.FirstBenchmark S 56 jmh.generated.FirstBenchmark_hashMapFirstSetTest_jmhTest S 19 hashMapFirstSetTest S 11 AverageTime E A 1 1 1 E E E E E E E E E E E E E M 1 4 size 5 2 32 4 1024 5 10000 6 100000 7 1000000 U 12 MICROSECONDS E E 
 JMH S 18 jmh.FirstBenchmark S 57 jmh.generated.FirstBenchmark_hashMapSecondGetTest_jmhTest S 20 hashMapSecondGetTest S 11 AverageTime E A 1 1 1 E E E E E E E E E E E E E M 1 4 size 5 2 32 4 1024 5 10000 6 100000 7 1000000 U 12 MICROSECONDS E E 
+JMH S 18 jmh.FirstBenchmark S 56 jmh.generated.FirstBenchmark_hashMapFirstSetTest_jmhTest S 19 hashMapFirstSetTest S 11 AverageTime E A 1 1 1 E E E E E E E E E E E E E M 1 4 size 5 2 32 4 1024 5 10000 6 100000 7 1000000 U 12 MICROSECONDS E E 
