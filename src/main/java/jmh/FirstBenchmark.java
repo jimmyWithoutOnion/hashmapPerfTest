@@ -15,22 +15,23 @@ import java.util.concurrent.TimeUnit;
 public class FirstBenchmark {
 
     @Param({"32","1024","10000","100000","1000000"})
-    public int size;
+    private int size;
 
-    public Random random = new Random(42);
+    private Random random = new Random(42);
 
-    public Map<Integer, Integer> testSet;
+    private Map<String, String> testSet;
 
-    public HashMap<Integer, Integer> testMap;
+    private HashMap<String, String> testMap;
 
     @Setup
     public void prepare() {
         Integer index = 100000000;
-        testSet = new LinkedHashMap<Integer, Integer>(size);
-        testMap = new HashMap<Integer, Integer>(size);
+        testSet = new LinkedHashMap<String, String>(size);
+        testMap = new HashMap<String, String>(size);
         for (int i = 0; i < size; i++) {
-            Integer key = random.nextInt();
-            Integer val = random.nextInt();
+            index += 1;
+            String key = index.toString();
+            String val = "test-context";
             testSet.put(key, val);
         }
     }
@@ -38,9 +39,9 @@ public class FirstBenchmark {
     @Benchmark
     public void hashMapFirstSetTest() {
 
-        for(Map.Entry<Integer, Integer> entry : testSet.entrySet()) {
-            Integer key = entry.getKey();
-            Integer val = entry.getValue();
+        for(Map.Entry<String, String> entry : testSet.entrySet()) {
+            String key = entry.getKey();
+            String val = entry.getValue();
 
             testMap.put(key, val);
         }
@@ -49,7 +50,7 @@ public class FirstBenchmark {
     @Benchmark
     public void hashMapSecondGetTest() {
 
-        for(Integer key : testSet.keySet()) {
+        for(String key : testSet.keySet()) {
             testSet.get(key);
         }
 
