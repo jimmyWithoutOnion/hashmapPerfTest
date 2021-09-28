@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 @State(Scope.Thread)
 public class FirstBenchmark {
 
-    @Param({"32","1024","10000","100000","1000000"})
+    @Param({"1000000"})
     private int size;
 
     private Random random = new Random(42);
